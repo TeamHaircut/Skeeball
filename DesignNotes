@@ -1,0 +1,67 @@
+Arduino Electronic Skeeball Machine - Design Notes
+
+8 Foot Runway
+  a good size for household use
+  
+3 Digit Electronic Score Display
+  displays the current score
+  contains 20 LEDs
+  
+1 Digit Electronic Ball Count Display
+  displays the current ball count
+  contains 7 LEDs
+  
+5 Scoring Pockets
+  50, 40, 30, 20, 10 points per ball
+  increments score display
+  
+Ball Count Switch
+  increments the ball count display
+  
+Coin Mechanism
+  adds credit
+  accepts US quarters, rejects all other currency
+  
+Start Button
+  Bypasses the coin mechanism
+  recalls score of last game
+  
+Game Over Light
+  indicates the end of the game
+  contains 1 LED
+  
+Winner Light
+  indicates the player has achieved a score greater than a preset Winner Score (about 250 pts)
+  contains 2 LEDs
+  
+Free Game Light
+  indicates the player has won a free game
+  contains 1 LED
+  
+Speaker
+  idle music
+  pocket sounds
+  simple melodies (Winner Song, High Score Song, Free Game Song)
+  
+Servo Motor
+  controls the ball release mechanism
+  
+8 Position Dip Switch
+  enables/disables idle music
+  enables/disables start button
+  enables/disables free games
+  defines 1 credit as equal to 1,2,3, or 4 quarter(s)
+  controls other user preferences
+  allows future expansion
+  
+Ethernet Shield
+  internet connectivity
+
+Android Companion App
+  http client / database application
+  
+Liquid Crystal Display
+  displays user inputs / settings
+  
+
+  
