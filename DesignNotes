@@ -1,67 +1,110 @@
 Arduino Electronic Skeeball Machine - Design Notes
+=======================================================
 
 8 Foot Runway
-  a good size for household use
-  
-3 Digit Electronic Score Display
-  displays the current score
-  contains 20 LEDs
-  
-1 Digit Electronic Ball Count Display
-  displays the current ball count
-  contains 7 LEDs
-  
-5 Scoring Pockets
-  50, 40, 30, 20, 10 points per ball
-  increments score display
-  
-Ball Count Switch
-  increments the ball count display
-  
-Coin Mechanism
-  adds credit
-  accepts US quarters, rejects all other currency
-  
-Start Button
-  Bypasses the coin mechanism
-  recalls score of last game
-  
+	•a good size for household use
+___________________________________________________
+
+Marquee features
+	•game over indicator
+	•winner indicator
+	•free game indicator
+	•digital score display
+	•digital ball count display
+	•attract mode
+____________________________________________________
+
 Game Over Light
-  indicates the end of the game
-  contains 1 LED
-  
+	•is on if ball count = 9
+	•1 LED
+____________________________________________________
+ 
 Winner Light
-  indicates the player has achieved a score greater than a preset Winner Score (about 250 pts)
-  contains 2 LEDs
+	•is on if current score is >= 250 points
+	•triggers unique melody 
+  	•2 LEDs
+_____________________________________________________
   
 Free Game Light
-  indicates the player has won a free game
-  contains 1 LED
+	•is on if current score is equal to 450 points
+	•triggers unique melody
+	•1 LED
+______________________________________________________
+
+Digital Score Display
+	•displays the current score to user
+
+  	20 LEDs total
+  	----------------------------
+  	hundreds place 		7 LEDs
+  	tens place 		7 LEDs
+  	ones place 		6 LEDs
+____________________________________________________
   
+Digital Ball Count Display
+	•displays the current ball count to user
+
+  	7 LEDs total
+	------------------------------
+	ones place		7 LEDs
+____________________________________________________
+  
+Score Pockets (10,20,30,40,50)
+	•increments score display
+	•score column contains 5 cherry switches
+_____________________________________________________
+  
+Gutter Pocket (0)
+	•increments ball count display
+	•triggers pocket sound
+_____________________________________________________
+  
+Coin Mechanism
+	•adds credit
+  	•accepts US quarters, rejects all other currency
+_____________________________________________________
+  
+Start Button
+	•adds credit
+______________________________________________________
+
 Speaker
-  idle music
-  pocket sounds
-  simple melodies (Winner Song, High Score Song, Free Game Song)
+	•plays idle music
+	•plays pocket sounds
+	•plays simple melodies
+_______________________________________________________
   
 Servo Motor
-  controls the ball release mechanism
-  
-8 Position Dip Switch
-  enables/disables idle music
-  enables/disables start button
-  enables/disables free games
-  defines 1 credit as equal to 1,2,3, or 4 quarter(s)
-  controls other user preferences
-  allows future expansion
-  
-Ethernet Shield
-  internet connectivity
-
-Android Companion App
-  http client / database application
+	•controls ball release mechanism
+________________________________________________________
   
 Liquid Crystal Display
-  displays user inputs / settings
-  
+	•displays user inputs / settings
+	•contrast controled by potentiometer
+________________________________________________________
 
+User input interface
+	•contains 4 push buttons
+________________________________________________________
+
+Arduino Ethernet Shield
+	•adds internet connectivity
+________________________________________________________
+
+8 Position Dip Switch
+	•enables/disables idle music
+	•enables/disables start button
+	•enables/disables free games
+	•defines 1 credit as equal to 1,2,3, or 4 quarter(s)
+	•controls other user preferences
+	•allows future expansion
+________________________________________________________
   
+Android Companion App
+	•http client / database application
+________________________________________________________
+
+High Score feature
+	•high score read from / written to database
+	•high score triggers unique melody
+========================================================
