@@ -57,6 +57,7 @@ _____________________________________________________
 Gutter Pocket (0)
 	•increments ball count display
 	•triggers pocket sound
+	•contains 1 cherry switch
 _____________________________________________________
   
 Coin Mechanism
@@ -83,8 +84,9 @@ Liquid Crystal Display
 	•contrast controled by potentiometer
 ________________________________________________________
 
-User input interface
+User Input Interface
 	•contains 4 push buttons
+	•manipulates setting
 ________________________________________________________
 
 Arduino Ethernet Shield
