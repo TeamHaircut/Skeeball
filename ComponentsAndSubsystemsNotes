@@ -1,0 +1,49 @@
+Skeeball Machine Components, and Subsystems Outline
+
+Machine
+  1)Cabinet
+    a)Marquee
+      •Free Game Light
+      •Winner Lights
+      •Game Over Light
+      •Score Display
+      •Ball Count Display
+    b)Board
+      •Rings
+      •Pads
+      •Pockets
+    c)Aux Lighting System
+      •Lamps
+      •Mounts
+    d)Internal Components
+      •Score Column
+      •Ball Return
+      •Main "Computer"
+        Internet Connectivity
+      •Conduit
+  2)Runway
+    a)Left Rail
+    b)Right Rail
+      •Ball Release Mechanism
+      •Viewport
+      •Ball Access Point
+    c)Conduit
+    d)Ally
+    e)Kickplate
+      •Coin Mechanism
+      •Start Button
+      •LCD System
+        LCD "Computer"
+        Contrast Control
+        User-Input Interface
+      •Conduit
+  3)Base
+    a)Rear Supports
+    b)Rear Base
+    c)Forward Supports
+    d)Forward Base
+  4)Cage
+  
+Android Companion Application
+  1)Http Client
+  2)Database
