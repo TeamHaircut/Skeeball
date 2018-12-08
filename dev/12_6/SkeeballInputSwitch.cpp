@@ -1,5 +1,6 @@
 #include "Arduino.h"
 #include "SkeeballInputSwitch.h"
+#include <QueueArray.h>
 
 SkeeballInputSwitch::SkeeballInputSwitch(int pin)
 
@@ -10,10 +11,18 @@ SkeeballInputSwitch::SkeeballInputSwitch(int pin)
 
 int SkeeballInputSwitch::Get()
 {
-	return _count;
+	int val = 0;
+	if (!_queue.isEmpty())
+	{
+		val = _queue.pop();
+	}
+	else
+		val = 0;
+	return val;
 }
 
-void SkeeballInputSwitch::Increment(int incVal)
+
+void SkeeballInputSwitch::Increment()
 {
 	int reading = digitalRead(_pin);
 
@@ -27,7 +36,7 @@ void SkeeballInputSwitch::Increment(int incVal)
 			_buttonState = reading;
 
 			if (_buttonState == LOW) {
-				_count = _count + incVal;
+				_queue.push(1);
 			}
 		}
 	}
