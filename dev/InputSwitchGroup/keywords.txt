@@ -1,0 +1,2 @@
+InputSwitchGroup	KEYWORD1
+Total	KEYWORD2
