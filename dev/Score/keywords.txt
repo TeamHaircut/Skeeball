@@ -1,0 +1,3 @@
+Score	KEYWORD1
+SetScoreSwitchPins	KEYWORD2
+GetScore	KEYWORD2
