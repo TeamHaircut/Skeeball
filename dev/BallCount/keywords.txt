@@ -1,0 +1,3 @@
+BallCount	KEYWORD1
+SetBallCountSwitchPin	KEYWORD2
+GetBallCount	KEYWORD2
