@@ -5,7 +5,7 @@
 SkeeballInputSwitch::SkeeballInputSwitch(int pin)
 
 	{
-	pinMode(pin, OUTPUT);
+	pinMode(pin, INPUT);
 	_pin = pin;
 	}
 
