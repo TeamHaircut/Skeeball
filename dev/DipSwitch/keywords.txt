@@ -1,0 +1,3 @@
+DipSwitch	KEYWORD1
+SetPin	KEYWORD2
+IsEnabled	KEYWORD2
