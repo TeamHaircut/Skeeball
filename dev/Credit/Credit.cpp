@@ -1,6 +1,7 @@
 #include "Arduino.h"
 #include "InputSwitchGroup.h"
 #include "SkeeballInputSwitch.h"
+#include "DipSwitch.h"
 #include "Credit.h"
 
 void Credit::SetCreditSwitchPins(int pins[], int pinCount)
@@ -14,6 +15,33 @@ void Credit::SetCreditSwitchPins(int pins[], int pinCount)
 		startButtonSwitch[0] = SkeeballInputSwitch(_pins[1]);
 }
 
+void Credit::SetCreditDipSwitchPins(int pin0, int pin1)
+{
+	creditDip0.SetPin(pin0);
+	creditDip1.SetPin(pin1);
+}
+
+int Credit::GetCreditCondition()
+{
+	if (creditDip0.IsEnabled() && creditDip1.IsEnabled())
+	{
+		SetCreditCondition(4);
+	}
+	if (!creditDip0.IsEnabled() && creditDip1.IsEnabled())
+	{
+		SetCreditCondition(3);
+	}
+	if (creditDip0.IsEnabled() && !creditDip1.IsEnabled())
+	{
+		SetCreditCondition(2);
+	}
+	if (!creditDip0.IsEnabled() && !creditDip1.IsEnabled())
+	{
+		SetCreditCondition(1);
+	}
+	return _creditCondition;
+}
+
 void Credit::SetCreditCondition(int val)
 {
 	_creditCondition = val;
@@ -21,6 +49,6 @@ void Credit::SetCreditCondition(int val)
 
 int Credit::GetCredits()
 {
-	return (CoinMechSwitchGroup.Total(coinMechSwitch, 1) * 1)+(StartButtonSwitchGroup.Total(startButtonSwitch, 1) * _creditCondition);
+	return (CoinMechSwitchGroup.Total(coinMechSwitch, 1) * 1)+(StartButtonSwitchGroup.Total(startButtonSwitch, 1) * GetCreditCondition());
 }
 
