@@ -1,4 +1,6 @@
 Credit	KEYWORD1
 SetCreditSwitchPins	KEYWORD2
+SetCreditDipSwitchPins	KEYWORD2
 GetCredits	KEYWORD2
 SetCreditCondition	KEYWORD2
+GetCreditCondition	KEYWORD2
