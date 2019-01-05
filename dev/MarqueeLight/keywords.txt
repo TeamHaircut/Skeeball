@@ -1,0 +1,3 @@
+MarqueeLight	KEYWORD1
+On	KEYWORD2
+Off	KEYWORD2
