@@ -1,0 +1,13 @@
+SkeeballSound	KEYWORD1
+PlaySongPowerUp	KEYWORD2
+PlaySongIdle	KEYWORD2
+PlaySongCoinUp	KEYWORD2
+PlaySongFG	KEYWORD2
+PlaySongHS	KEYWORD2
+PlaySongWN	KEYWORD2
+PlaySound50	KEYWORD2
+PlaySound40	KEYWORD2
+PlaySound30	KEYWORD2
+PlaySound20	KEYWORD2
+PlaySound10	KEYWORD2
+PlaySoundGutter	KEYWORD2
