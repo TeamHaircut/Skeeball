@@ -1,0 +1,5 @@
+MarqueeStatus	KEYWORD1
+SetPin	KEYWORD2
+SetPins	KEYWORDS2
+SetStatus	KEYWORD2
+GetStatus	KEYWORD2
