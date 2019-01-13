@@ -1,17 +1,29 @@
 #include <Wire.h>
 #include <Display.h>
 
+const int pin7 = 0;
+const int pin8 = 0;
+const int pin9 = 0;
+const int pin10 = 0;
 const int pin11 = 11;
-const int pin12 = 12;
+const int pin12 = 0;
 const int pin13 = 0;
 
-int pins[] = {pin11,pin12,pin13};
+//int pinsHP[] = {pin13,pin12, pin11, pin10, pin9, pin8, pin7};
+int pinsHP[] = {0,0, 0, 0, 0, 0, 0};
+
+int pinsTP[] = {pin13,pin12, pin11, pin10, pin9, pin8, pin7};
+//int pinsTP[] = {0,0, 0, 0, 0, 0, 0};
+
+//int pinsOP[] = {pin13,pin12, pin11, pin10, pin9, pin8, pin7};
+int pinsOP[] = {0,0, 0, 0, 0, 0, 0};
 
 Display display;
 
+
+
 void setup() {
-  //display.SetPins(pin11, pin12, pin13);
-  display.SetPins(pins,3);
+  display.SetScoreDisplayPins(pinsHP,pinsTP,pinsOP);
   Wire.begin(8);                // join i2c bus with address #8
   Wire.onReceive(receiveEvent); // register event
   Serial.begin(9600);           // start serial for output
